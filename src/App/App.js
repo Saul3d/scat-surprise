@@ -6,7 +6,7 @@ import { BrowserRouter,
 } from 'react-router-dom';
 import firebase from 'firebase/app';
 
-import Navbar from '../Component/Navbar/Navbar';
+import MyNavbar from '../Component/MyNavbar/MyNavbar';
 import Home from '../Component/Home/Home';
 import Auth from '../Component/Auth/Auth';
 
@@ -63,7 +63,7 @@ class App extends React.Component {
       <div className="App">
         <BrowserRouter>
           <React.Fragment>
-            <Navbar authed={authed} />
+            <MyNavbar authed={authed} />
             <div className="container">
               <div className="row">
                 <Switch>
