@@ -1,14 +1,14 @@
 import React from 'react';
 
 
-class Home extends React.Component {
+class EditScat extends React.Component {
   render() {
     return (
-      <div className="homeComponent">
+      <div className="editScatComponent">
         <button className="btn btn-danger">button</button>
       </div>
     );
   }
 }
 
-export default Home;
+export default EditScat;
