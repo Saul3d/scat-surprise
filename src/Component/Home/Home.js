@@ -10,11 +10,21 @@ class Home extends React.Component {
     scats: [],
   }
 
-  componentDidMount() {
+  getScats = () => {
     const { uid } = firebase.auth().currentUser;
     scatData.getScatData(uid)
       .then(scats => this.setState({ scats }))
       .catch(err => console.error('Could not get scats', err));
+  }
+
+  componentDidMount() {
+    this.getScats();
+  }
+
+  deleteScat = (scatId) => {
+    scatData.deleteScat(scatId)
+      .then(() => this.getScats())
+      .catch(err => console.error('unable to delete', err));
   }
 
   render() {
@@ -22,13 +32,14 @@ class Home extends React.Component {
       <ScatCard
       key={scat.id}
       scat={scat}
+      deleteScat={this.deleteScat}
      />
     ));
     return (
       <div className="homeComponent col">
         <h1>Home</h1>
         <div className="d-flex">
-        {makeScatsCards}
+          {makeScatsCards}
         </div>
       </div>
     );
