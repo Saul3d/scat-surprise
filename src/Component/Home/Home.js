@@ -28,7 +28,7 @@ class Home extends React.Component {
       <div className="homeComponent col">
         <h1>Home</h1>
         <div className="d-flex">
-        {makeScatsCards}
+          {makeScatsCards}
         </div>
       </div>
     );
