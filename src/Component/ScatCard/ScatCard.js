@@ -18,6 +18,7 @@ class ScatCard extends React.Component {
 
   render() {
     const { scat } = this.props;
+    const editLink = `/edit/${scat.id}`;
     const singleLink = `/scat/${scat.id}`;
     return (
       <div className= "ScatCard col-3">
