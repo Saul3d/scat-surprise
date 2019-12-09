@@ -64,7 +64,7 @@ class NewScat extends React.Component {
             <input
             type="text"
             className="form-control"
-            id="color" 
+            id="color"
             placeholder="brown"
             value={newScat.color}
             onChange={this.colorChange}
